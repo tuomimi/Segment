@@ -1,4 +1,4 @@
-//定义父类
+//鐖剁被
 package string;
 
 public abstract class Shape1 {
@@ -6,7 +6,7 @@ public abstract class Shape1 {
 }
 
 
-//子类
+//瀛愮被
 package string;
 
 public class Rectangle extends Shape1 {
@@ -26,7 +26,7 @@ public class Rectangle extends Shape1 {
 }
 
 
-//子类
+//瀛愮被
 package string;
 
 public class Circle extends Shape1 {
@@ -44,7 +44,7 @@ public class Circle extends Shape1 {
 }
 
 
-//测试
+//娴嬭瘯
 package string;
 
 public class TestShape1 {
