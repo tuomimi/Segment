@@ -1,4 +1,4 @@
-//¶¨ÒåÀà²¢²âÊÔ
+//å®šä¹‰ç±»å¹¶æµ‹è¯•
 package string;
 
 public class Student {
@@ -13,19 +13,19 @@ public class Student {
 		this.major = major;
 		this.setCet4_scores(cet4_scores);
 	}
-    //»ñÈ¡ĞÕÃû
+    //è·å–å§“å
 	public String getName() {
 		return name;
 	}
-    //»ñÈ¡Äê¼¶
+    //è·å–å¹´çº§
 	public int getGrade() {
 		return grade;
 	}
-    //»ñÈ¡×¨Òµ
+    //è·å–ä¸“ä¸š
 	public String getMajor() {
 		return major;
 	}
-    //ËÄ¼¶³É¼¨
+    //å››çº§æˆç»©
 	public int[] getCet4_scores() {
 		return cet4_scores;
 	}
@@ -33,12 +33,12 @@ public class Student {
 	public void setCet4_scores(int[] cet4_scores) {
 		this.cet4_scores = cet4_scores;
 	}
-    //ÉıÒ»¼¶
-	public void level_up() {
+    //å‡ä¸€çº§
+	public void level_Up() {
 		grade = grade + 1;
 	}
-    //ÊÇ·ñÍ¨¹ıËÄ¼¶
-	public boolean passed_cet4() {
+    //æ˜¯å¦é€šè¿‡å››çº§
+	public boolean passed_Cet4() {
 		for (int i = 0; i < cet4_scores.length; i++) {
 			if (cet4_scores[i] > 425) {
 				return true;
@@ -46,14 +46,20 @@ public class Student {
 		}
 		return false;
 	}
-    //´òÓ¡ĞÕÃû¡¢Äê¼¶¡¢×¨ÒµÒÔ¼°ÊÇ·ñÍ¨¹ıËÄ¼¶
+    //æ‰“å°å§“åã€å¹´çº§ã€ä¸“ä¸šä»¥åŠæ˜¯å¦é€šè¿‡å››çº§
 	public void printInfo() {
-		System.out.println("\n"+getName() + " " + getGrade() + " " + getMajor()
-				+ " ");
-		if (passed_cet4()) {
-			System.out.print("ËÄ¼¶Í¨¹ı!");
+		System.out.println(""\nå§“åï¼š" + getName() +" "+"\nä¸“ä¸šï¼š" + getMajor());
+		switch(grade){
+		case 0:System.out.println("å¹´çº§ï¼šå¤§ä¸€");break;
+		case 1:System.out.println("å¹´çº§ï¼šå¤§äºŒ");break;
+		case 2:System.out.println("å¹´çº§ï¼šå¤§ä¸‰");break;
+		case 3:System.out.println("å¹´çº§ï¼šå¤§å››");break;
+		default:System.out.println("å·²ç»æ¯•ä¸šäº†");break;
+		}
+		if (passed_Cet4()) {
+			System.out.print("å››çº§é€šè¿‡!");
 		} else
-			System.out.print("ËÄ¼¶Î´Í¨¹ı£¡");
+			System.out.print("å››çº§æœªé€šè¿‡ï¼");
 	}
 }
 
@@ -61,7 +67,7 @@ public class Student {
 
 
 
-//²âÊÔ
+//æµ‹è¯•
 package string;
 
 import string.Student;
@@ -71,9 +77,9 @@ public class TestMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] cet4_scores = { 418, 420, 441 };
-		Student s = new Student("ÍÑßä", 2, "ĞÅÏ¢¶Ô¿¹¼¼Êõ", cet4_scores);
-		s.printInfo();     //´òÓ¡ĞÕÃû¡¢Äê¼¶¡¢×¨ÒµÒÔ¼°ÊÇ·ñÍ¨¹ıËÄ¼¶
-		s.level_up();      //ÉıÒ»¼¶
-		s.printInfo();     //´òÓ¡ĞÕÃû¡¢Äê¼¶¡¢×¨ÒµÒÔ¼°ÊÇ·ñÍ¨¹ıËÄ¼¶
+		Student s = new Student("è„±å’ª", 2, "ä¿¡æ¯å¯¹æŠ—æŠ€æœ¯", cet4_scores);
+		s.printInfo();     //æ‰“å°å§“åã€å¹´çº§ã€ä¸“ä¸šä»¥åŠæ˜¯å¦é€šè¿‡å››çº§
+		s.level_Up();      //å‡ä¸€çº§
+		s.printInfo();     //æ‰“å°å§“åã€å¹´çº§ã€ä¸“ä¸šä»¥åŠæ˜¯å¦é€šè¿‡å››çº§
 	}
 }
