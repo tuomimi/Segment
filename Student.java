@@ -48,7 +48,7 @@ public class Student {
 	}
     //打印姓名、年级、专业以及是否通过四级
 	public void printInfo() {
-		System.out.println(""\n姓名：" + getName() +" "+"\n专业：" + getMajor());
+		System.out.println("\n姓名：" + getName() +" "+"\n专业：" + getMajor());
 		switch(grade){
 		case 0:System.out.println("年级：大一");break;
 		case 1:System.out.println("年级：大二");break;
