@@ -1,4 +1,4 @@
-//ÀàµÄ×éºÏ
+//ç±»çš„ç»„åˆ
 package string;
 
 public class Person {
@@ -10,16 +10,16 @@ public class Person {
 		this.weight = weight;
 	}
 
-	public double getWeight() {      //µÃµ½ÖØÁ¿
+	public double getWeight() {      //å¾—åˆ°é‡é‡
 		return weight;
 	}
 
-	public double getHeight() {      //µÃµ½¸ß¶È
+	public double getHeight() {      //å¾—åˆ°é«˜åº¦
 		return height;
 	}
 
-	public void printInfo() {        //´òÓ¡ĞÅÏ¢
-		System.out.println("ÖØÁ¿£º" + getWeight() + "\n¸ß¶È£º" + getHeight());
+	public void printInfo() {        //æ‰“å°ä¿¡æ¯
+		System.out.println("é‡é‡ï¼š" + getWeight() + "\né«˜åº¦ï¼š" + getHeight());
 	}
 }
 
@@ -45,6 +45,7 @@ public class Hand extends Limb {
 }
 
 
+
 package string;
 
 public class Leg extends Limb {
@@ -55,8 +56,7 @@ public class Leg extends Limb {
 }
 
 
-
-//²âÊÔ
+//æµ‹è¯•
 package string;
 
 public class TestPerson {
@@ -65,9 +65,9 @@ public class TestPerson {
 		// TODO Auto-generated method stub
 		Hand h = new Hand(20, 15);
 		Leg l = new Leg(80, 50);
-		System.out.println("ÊÖ£º");
+		System.out.println("æ‰‹ï¼š");
 		h.printInfo();
-		System.out.println("ÍÈ£º");
+		System.out.println("è…¿ï¼š");
 		l.printInfo();
 	}
 }
