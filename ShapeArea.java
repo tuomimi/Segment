@@ -87,19 +87,27 @@ public class Triangle extends ShapeArea {
 //测试
 package test;
 
+import java.util.ArrayList;
+
 public class TestShapeArea {
 
 	public static void main(String[] arg) {
 		// TODO Auto-generated method stub
-                double arr[]=new double[4];
-	        Rectangle r=new Rectangle(10,20);
-                arr[0]=r.getArea();
-	        Circle c=new Circle(10);
-                arr[1]=c.getArea();
-                Square s=new Square(10);
-                arr[2]=s.getArea();
-                Triangle t=new Triangle(10, 5);
-                arr[3]=t.getArea();
-	        System.out.println("Total Area:" + (arr[0]+arr[1]+arr[2]+arr[3]));
+                ArrayList<ShapeArea> shapes = new ArrayList<ShapeArea>();
+		shapes.add(new Rectangle(10, 20));
+		shapes.add(new Circle(10));
+		shapes.add(new Square(10));
+		shapes.add(new Triangle(20, 5));
+		System.out.println("Total Area:" + getTotalArea(shapes));
+	}
+
+	private static double getTotalArea(ArrayList<ShapeArea> shapes) {
+		// TODO Auto-generated method stub
+		double totalArea = 0;
+		for (int i = 0; i < shapes.size(); i++) {
+			totalArea = totalArea + ((ShapeArea) shapes.get(i)).getArea();
+		}
+		return totalArea;
+	}
 }
 
