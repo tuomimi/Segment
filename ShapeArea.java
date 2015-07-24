@@ -1,4 +1,4 @@
-//¸¸Àà
+//çˆ¶ç±»
 package test;
 
 public abstract class ShapeArea {
@@ -6,7 +6,7 @@ public abstract class ShapeArea {
 }
 
 
-//³¤·½ĞÎ
+//é•¿æ–¹å½¢
 package test;
 
 public class Rectangle extends ShapeArea {
@@ -19,7 +19,7 @@ public class Rectangle extends ShapeArea {
 	}
 
 	@Override
-	public double getArea() {       //Ãæ»ı
+	public double getArea() {       //é¢ç§¯
 		// TODO Auto-generated method stub
 		return length * width;
 	}
@@ -27,7 +27,7 @@ public class Rectangle extends ShapeArea {
 
 
 
-//Ô²ĞÎ
+//åœ†å½¢
 package test;
 
 public class Circle extends ShapeArea {
@@ -38,14 +38,14 @@ public class Circle extends ShapeArea {
 	}
 
 	@Override
-	public double getArea() { // Ãæ»ı
+	public double getArea() { // é¢ç§¯
 		// TODO Auto-generated method stub
 		return Math.PI * radius * radius;
 	}
 }
 
 
-//Õı·½ĞÎ
+//æ­£æ–¹å½¢
 package test;
 
 public class Square extends ShapeArea {
@@ -56,13 +56,13 @@ public class Square extends ShapeArea {
 	}
 
 	@Override
-	public double getArea() {     //Ãæ»ı
+	public double getArea() {     //é¢ç§¯
 		// TODO Auto-generated method stub
 		return length * length;
 	}
 }
 
-//Èı½ÇĞÎ
+//ä¸‰è§’å½¢
 package test;
 
 public class Triangle extends ShapeArea {
@@ -75,7 +75,7 @@ public class Triangle extends ShapeArea {
 	}
 
 	@Override
-	public double getArea() {       //Ãæ»ı
+	public double getArea() {       //é¢ç§¯
 		// TODO Auto-generated method stub
 		return 0.5 * length * height;
 	}
@@ -84,7 +84,7 @@ public class Triangle extends ShapeArea {
 
 
 
-//²âÊÔ
+//æµ‹è¯•
 package test;
 
 import java.util.ArrayList;
@@ -97,8 +97,8 @@ public class TestShapeArea {
 		System.out.println("Total Area:" + getTotalArea(shapes));
 	}
 
-	private static void getTotalArea(ArrayList<String> String) {       //×ÜÃæ»ı
-		ArrayList<String> shapes = new ArrayList<String>();
+	private static void getTotalArea(ArrayList<ShapeArea> String) {       //æ€»é¢ç§¯
+		ArrayList<ShapeArea> shapes = new ArrayList<ShapeArea>();
 		shapes.add(new Rectangle(10, 20));
 		shapes.add(new Circle(10));
 		shapes.add(new Square(10));
