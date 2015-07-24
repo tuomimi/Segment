@@ -105,7 +105,7 @@ public class TestShapeArea {
 		// TODO Auto-generated method stub
 		double totalArea = 0;
 		for (int i = 0; i < shapes.size(); i++) {
-			totalArea = totalArea + ((ShapeArea) shapes.get(i)).getArea();
+			totalArea = totalArea + (shapes.get(i)).getArea();
 		}
 		return totalArea;
 	}
