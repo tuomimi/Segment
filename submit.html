@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <script language="javascript" type="text/javascript">
+    function checked(){
+	   var username=document.getElementById("username");
+           if(username.value.trim()=="")
+		   {
+	          alert("Username cannot be blank!");
+			  username.focus();
+		   }
+	       else{
+              var password=document.getElementById("password");
+              if(password.value.trim()=="")
+			  {
+			    alert("Password cannot be blank!");
+                password.focus();
+		      }
+		 }
+     }
+  </script>
+   <center><br><br><br><br><br><br><br><br><div> 
+	   <font size="5"><strong>Sign up</strong></font>
+	</div>
+	<br><br>
+	<div>
+	   username:<input type="text" id="username">
+	</div>
+	<br>
+	<div>
+	   password:<input type="password" id="password">
+	</div>
+	<br>
+	<div>
+	   <input type="button" value="Submit" onclick="window.checked()">
+	</div>
+  </center>
+ </body>
+</html>
